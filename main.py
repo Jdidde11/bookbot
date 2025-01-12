@@ -16,13 +16,11 @@ def main():
 
     print("--- End report ---")
 
-def get_book_text(path):
-    with open(path) as f:
-        return f.read()
-    
+
 def get_num_words(text):
     words = text.split()
-    return len(text)
+    return len(words)
+
 
 def sort_on(d):
     return d["num"]
@@ -46,6 +44,11 @@ def get_chars_dict(text):
             chars[lowered] = 1
     return chars
 
+
+
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
 
 
 main()
